@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  grid-template-rows: 1fr;
+  background-color: #1b1b1be1;
+  scroll-behavior: smooth;
+}
+
+#chat {
+  width: 350px;
+  height: 90vh;
+  border: 2px solid #d2d2d2d0;
+  border-radius: 30px;
+  margin: 5vh auto;
+  background-color: #1b1b1bae;
+}
+
+#messages {
+  padding: 0px 20px 0px;
+  height: 80vh;
+  overflow-y: scroll;
+  color: white;
+  width: 87%;
+  margin-bottom: 5px;
+
+  li {
+    list-style: none;
+    background-color: #1b1b1bae;
+    padding: 10px 10px 4px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #2f2f2f9a;
+      }
+      small {
+        margin-left: 5px;
+      }
+    }
+    p {
+      margin: 5px 0 0;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+form {
+  margin: 0 0 0 12px;
+}
+
+input {
+  border-radius: 20px;
+  border: 1px solid #eee;
+  margin: 4px;
+  padding: 0 8px;
+  width: 70%;
+  height: 30px;
+  background-color: transparent;
+  color: white;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+button {
+  background-color: transparent;
+  height: 30px;
+  width: 17%;
+  border: 1px solid white;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    background-color: white;
+    color: #1b1b1bae;
+    transition: 0.2s;
+  }
+}
